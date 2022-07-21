@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack"
   },
   "keywords": [],
   "author": "Andrew Park",
   "license": "ISC",
   "dependencies": {
+    "@kurkle/color": "^0.1.9",
     "chart.js": "^3.7.0"
   },
   "devDependencies": {
