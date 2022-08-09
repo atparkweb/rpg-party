@@ -14,7 +14,7 @@ import Utils from './lib/utils';
           backgroundColor: Utils.transparentize(Utils.CHART_COLORS[colorKey], 0.5)
         },
       ]
-    }
+    };
   }
 
   function getCombinedData() {
@@ -46,7 +46,7 @@ import Utils from './lib/utils';
           backgroundColor: Utils.transparentize(Utils.CHART_COLORS.orange, 0.5)
         },
       ]
-    }
+    };
   }
 
   function getConfig(title, data) {
@@ -61,17 +61,11 @@ import Utils from './lib/utils';
             text: title
           }
         },
-        // scales: {
-        //   r: {
-        //     min: 0,
-        //     max: 18
-        //   }
-        // }
       }
-    }
+    };
   }
 
- 
+
 
   function main() {
     const items = [
@@ -89,11 +83,10 @@ import Utils from './lib/utils';
       }
     ];
 
-    // items.map((item) => {
-    //   new Chart(document.getElementById(item.id).getContext('2d'), item.config);
-    // });
-
-    new Chart(document.getElementById('chart4').getContext('2d'), getConfig('Party', getCombinedData()))
+    const chartEl = document.getElementById('chart4');
+    const config = getConfig('Party', getCombinedData());
+    const context = chartEl.getContext('2d');
+    new Chart(context, config);
   };
 
   main();
